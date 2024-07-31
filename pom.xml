@@ -8,7 +8,20 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>verademo Maven Webapp</name>
 	<url>http://maven.apache.org</url>
-	
+
+	<!-- Internal JFrog Repo -->	
+	<repositories>
+	  <repository>
+	    <id>Internal</id>
+	    <name>JFrog Repo</name>
+	    <layout>default</layout>
+	    <url>http://localhost:8082/artifactory/libs-release-local</url>
+	    <snapshots>
+	      <enabled>true</enabled>
+	    </snapshots>
+	  </repository>
+	</repositories>	
+
 	<!-- Component Version Properties -->
 	<properties>
 		<spring.version>4.3.10.RELEASE</spring.version>
