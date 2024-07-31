@@ -14,18 +14,17 @@
 		<spring.version>4.3.10.RELEASE</spring.version>
 		<fileupload.version>1.3.2</fileupload.version>
 	</properties>
-
-	<!-- JFrog-Test begin here -->
-	<distributionManagement>
-	    <repository>
-	        <id>central</id>
-	        <name>6063ee7d9199-releases</name>
-	        <url>https://sroy037.com/artifactory/libs-release-local</url>
-	    </repository>
-	</distributionManagement>
 	
 	<!-- Dependencies begin here -->
 	<dependencies>
+		<!-- JFrog dependencies -->
+		<dependency>
+		    <groupId>common</groupId>
+		    <artifactId>internal</artifactId>
+		    <version>0.0.2</version>
+		    <type>pom</type>
+		</dependency>
+		
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
