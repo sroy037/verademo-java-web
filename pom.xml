@@ -15,7 +15,7 @@
 	    <id>Internal</id>
 	    <name>JFrog Repo</name>
 	    <layout>default</layout>
-	    <url>http://localhost:8082/artifactory/libs-release-local</url>
+	    <url>https://sroy037.com/artifactory/libs-release</url>
 	    <snapshots>
 	      <enabled>true</enabled>
 	    </snapshots>
