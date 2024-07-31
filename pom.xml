@@ -172,9 +172,9 @@
 		
 		<!-- JFrog dependencies -->
 		<dependency>
-		    <groupId>org.local.apache.logging.log4j</groupId>
+		    <groupId>org.common.logging.log4j</groupId>
 		    <artifactId>log4j</artifactId>
-		    <version>0.0.0</version>
+		    <version>0.1</version>
 		    <type>xml</type>
 		</dependency>
 	</dependencies>
