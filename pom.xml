@@ -20,7 +20,7 @@
 	    <repository>
 	        <id>central</id>
 	        <name>6063ee7d9199-releases</name>
-	        <url>https://sroy037.com/artifactory/libs-release</url>
+	        <url>https://sroy037.com/artifactory/libs-release-local</url>
 	    </repository>
 	</distributionManagement>
 	
