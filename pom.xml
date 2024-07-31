@@ -162,7 +162,6 @@
 		    <groupId>common</groupId>
 		    <artifactId>internal</artifactId>
 		    <version>0.0.2</version>
-		    <type>pom</type>
 		</dependency>
 	</dependencies>
 
