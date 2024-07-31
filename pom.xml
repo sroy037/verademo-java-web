@@ -159,9 +159,10 @@
 		
 		<!-- JFrog dependencies -->
 		<dependency>
-		    <groupId>common</groupId>
-		    <artifactId>internal</artifactId>
-		    <version>0.0.2</version>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <version>1.7.25</version>
+		    <type>25_</type>
 		</dependency>
 	</dependencies>
 
