@@ -159,10 +159,10 @@
 		
 		<!-- JFrog dependencies -->
 		<dependency>
-		    <groupId>org.slf4j</groupId>
-		    <artifactId>slf4j-api</artifactId>
-		    <version>1.7.25</version>
-		    <type>25_</type>
+		    <groupId>org.local.apache.logging.log4j</groupId>
+		    <artifactId>log4j</artifactId>
+		    <version>0.0.0</version>
+		    <type>xml</type>
 		</dependency>
 	</dependencies>
 
