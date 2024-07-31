@@ -9,6 +9,7 @@
 	<name>verademo Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
+	<!-- Internal JFrog Repo -->	
 	<repositories>
 	  <repository>
 	    <id>Internal</id>
@@ -20,6 +21,7 @@
 	    </snapshots>
 	  </repository>
 	</repositories>	
+	
 	<!-- Component Version Properties -->
 	<properties>
 		<spring.version>4.3.10.RELEASE</spring.version>
@@ -28,14 +30,6 @@
 	
 	<!-- Dependencies begin here -->
 	<dependencies>
-		<!-- JFrog dependencies -->
-		<dependency>
-		    <groupId>common</groupId>
-		    <artifactId>internal</artifactId>
-		    <version>0.0.2</version>
-		    <type>pom</type>
-		</dependency>
-		
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -174,6 +168,14 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-collections4</artifactId>
 			<version>4.0</version>
+		</dependency>
+		
+		<!-- JFrog dependencies -->
+		<dependency>
+		    <groupId>common</groupId>
+		    <artifactId>internal</artifactId>
+		    <version>0.0.2</version>
+		    <type>pom</type>
 		</dependency>
 	</dependencies>
 
