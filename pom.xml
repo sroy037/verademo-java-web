@@ -28,6 +28,8 @@
 		<fileupload.version>1.3.2</fileupload.version>
 	</properties>
 	
+	<!-- Dependencies begin here -->
+	<dependencies>
 		
 		<!-- JFrog dependencies -->
 		<dependency>
