@@ -15,7 +15,7 @@
 	    <id>Internal</id>
 	    <name>JFrog Repo</name>
 	    <layout>default</layout>
-	    <url>http://localhost:8082/artifactory/libs-release</url>
+	    <url>http://localhost:8082/artifactory/libs-release-local</url>
 	    <snapshots>
 	      <enabled>true</enabled>
 	    </snapshots>
@@ -35,8 +35,7 @@
 		<dependency>
 		    <groupId>com.google.code.gson</groupId>
 		    <artifactId>gson</artifactId>
-		    <version>0.0.1</version>
-		    <type>jar</type>
+		    <version>0.0.2</version>
 		</dependency>
 	</dependencies>
 
