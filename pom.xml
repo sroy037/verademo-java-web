@@ -36,7 +36,7 @@
 		    <groupId>com.google.code.gson</groupId>
 		    <artifactId>gson</artifactId>
 		    <version>0.0.2</version>
-		    <packaging>jar</packaging>
+		    <type>jar</type>
 		</dependency>
 	</dependencies>
 
