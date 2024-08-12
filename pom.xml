@@ -14,6 +14,48 @@
 		<spring.version>4.3.10.RELEASE</spring.version>
 		<fileupload.version>1.3.2</fileupload.version>
 	</properties>
+
+	<!-- Internal JFrog Repo -->
+	<repositories>
+	    <repository>
+	        <id>central</id>
+	        <url>http://localhost:8082/artifactory/libs-release</url>
+	        <snapshots>
+	            <enabled>false</enabled>
+	            <updatePolicy>always</updatePolicy>
+	            <checksumPolicy>warn</checksumPolicy>
+	        </snapshots>
+	    </repository>
+	    <repository>
+	        <id>snapshots</id>
+	        <url>http://localhost:8082/artifactory/libs-snapshot</url>
+	        <releases>
+	            <enabled>false</enabled>
+	            <updatePolicy>always</updatePolicy>
+	            <checksumPolicy>warn</checksumPolicy>
+	        </releases>
+	    </repository>
+	</repositories>
+	<pluginRepositories>
+	    <pluginRepository>
+	        <id>central</id>
+	        <url>http://localhost:8082/artifactory/libs-release</url>
+	        <snapshots>
+	            <enabled>false</enabled>
+	            <updatePolicy>always</updatePolicy>
+	            <checksumPolicy>warn</checksumPolicy>
+	        </snapshots>
+	    </pluginRepository>
+	    <pluginRepository>
+	        <id>snapshots</id>
+	        <url>http://localhost:8082/artifactory/libs-snapshot</url>
+	        <releases>
+	            <enabled>false</enabled>
+	            <updatePolicy>always</updatePolicy>
+	            <checksumPolicy>warn</checksumPolicy>
+	        </releases>
+	    </pluginRepository>
+	</pluginRepositories>
 	
 	<!-- Dependencies begin here -->
 	<dependencies>
