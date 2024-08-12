@@ -33,10 +33,10 @@
 		
 		<!-- JFrog dependencies -->
 		<dependency>
-		    <groupId>com.google.code.gson</groupId>
-		    <artifactId>gson</artifactId>
-		    <version>0.0.2</version>
-		    <type>jar</type>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java-local</artifactId>
+		    <version>0.0.1</version>
+		    <type>pom</type>
 		</dependency>
 	</dependencies>
 
