@@ -12,7 +12,7 @@
 	<!-- Internal JFrog Repo -->	
 	<repositories>
 	  <repository>
-	    <id>Internal</id>
+	    <id>central</id>
 	    <name>JFrog Repo</name>
 	    <layout>default</layout>
 	    <url>http://localhost:8082/artifactory/libs-release</url>
