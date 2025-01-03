@@ -26,6 +26,7 @@ jobs:
 
  results_to_sarif:
    runs-on: ubuntu-latest
+   depends: get-policy-flaws
    name: import policy results to sarif
    steps:
      - name: Get scan results
