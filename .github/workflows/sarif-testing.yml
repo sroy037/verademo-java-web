@@ -31,7 +31,7 @@ jobs:
      - name: Get scan results
        uses: actions/download-artifact@v3
        with:
-         name: "Veracode Policy-Scan Results"
+         name: "policy-flaws"
      - name: Convert policy scan output to SARIF format
        id: convert
        uses: Veracode/veracode-pipeline-scan-results-to-sarif@v2.0.4
