@@ -12,6 +12,7 @@ jobs:
      image: veracode/api-signing:latest
    steps:
      - name: get policy flaws
+       working-directory: ./
        run: |
          ls -lrt .
          cp ../response.json /tmp/policy_flaws.json
