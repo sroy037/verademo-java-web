@@ -13,7 +13,7 @@ jobs:
    steps:
      - name: get policy flaws
        run: |
-         cp response.json > /tmp/policy_flaws.json
+         cp response.json /tmp/policy_flaws.json
 
      - name: save results file
        uses: actions/upload-artifact@v3
