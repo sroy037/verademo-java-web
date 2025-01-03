@@ -43,7 +43,7 @@ jobs:
          output-results-sarif: veracode-results.sarif
          repo_owner: sroy037
          repo_name: verademo-java-web
-         commitSHA: 4253693504ecd3e25aa8d87fefd63aa3defaccb6
+         commitSHA: $GITHUB_SHA
          ref: refs/heads/main
          githubToken: ${{ secrets.token }}
 
