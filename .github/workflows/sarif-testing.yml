@@ -33,6 +33,7 @@ jobs:
        uses: actions/download-artifact@v3
        with:
          name: "policy-flaws"
+
      - name: Convert policy scan output to SARIF format
        id: convert
        uses: Veracode/veracode-pipeline-scan-results-to-sarif@v2.0.4
@@ -45,3 +46,9 @@ jobs:
          commitSHA: 4253693504ecd3e25aa8d87fefd63aa3defaccb6
          ref: refs/heads/main
          githubToken: ${{ secrets.token }}
+
+     - name: save sarif file
+       uses: actions/upload-artifact@v3
+       with:
+         name: sarif-file
+         path: veracode-results.sarif
