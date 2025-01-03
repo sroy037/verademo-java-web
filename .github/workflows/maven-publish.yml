@@ -1,0 +1,44 @@
+# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
+# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
+
+name: Sarif Testing
+
+on: push
+
+jobs:
+ get-policy-flaws:
+   runs-on: ubuntu-latest
+   container: 
+     image: veracode/api-signing:latest
+   steps:
+     - name: get policy flaws
+       run: |
+         cd /tmp
+         cp response.json > policy_flaws.json
+
+     - name: save results file
+       uses: actions/upload-artifact@v3
+       with:
+         name: policy-flaws
+         path: /tmp/policy_flaws.json
+
+
+ results_to_sarif:
+   runs-on: ubuntu-latest
+   name: import policy results to sarif
+   steps:
+     - name: Get scan results
+       uses: actions/download-artifact@v3
+       with:
+         name: "Veracode Policy-Scan Results"
+     - name: Convert policy scan output to SARIF format
+       id: convert
+       uses: Veracode/veracode-pipeline-scan-results-to-sarif@v2.0.4
+       with:
+         results-json: /tmp/policy_flaws.json
+         output-results-sarif: veracode-results.sarif
+         repo_owner: sroy037
+         repo_name: verademo-java-web
+         commitSHA: COMMIT-SHA
+         ref: refs/heads/master
+         githubToken: {{ secrets.token }}
