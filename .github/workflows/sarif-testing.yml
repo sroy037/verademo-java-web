@@ -38,6 +38,7 @@ jobs:
        uses: Veracode/veracode-pipeline-scan-results-to-sarif@v2.0.4
        with:
          results-json: /tmp/policy_flaws.json
+         scan-type: policy
          output-results-sarif: veracode-results.sarif
          repo_owner: sroy037
          repo_name: verademo-java-web
