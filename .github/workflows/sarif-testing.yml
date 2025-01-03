@@ -63,6 +63,11 @@ jobs:
        with:
          name: verademo-java-web
 
+     - name: Get scan results
+       uses: actions/download-artifact@v3
+       with:
+         name: "sarif-file"
+
      - name: Upload SARIF file
        uses: github/codeql-action/upload-sarif@v2
        with:
