@@ -11,11 +11,13 @@ jobs:
    container: 
      image: veracode/api-signing:latest
    steps:
+     - name: checkout repo
+       uses: actions/checkout@v3
+       
      - name: get policy flaws
-       working-directory: ./
        run: |
          ls -lrt .
-         cp ../response.json /tmp/policy_flaws.json
+         cp response.json /tmp/policy_flaws.json
 
      - name: save results file
        uses: actions/upload-artifact@v3
