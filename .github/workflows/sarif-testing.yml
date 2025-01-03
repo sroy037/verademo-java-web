@@ -8,8 +8,6 @@ on: push
 jobs:
  get-policy-flaws:
    runs-on: ubuntu-latest
-   container: 
-     image: veracode/api-signing:latest
    steps:
      - name: checkout repo
        uses: actions/checkout@v3
