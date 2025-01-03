@@ -40,4 +40,4 @@ jobs:
          repo_name: verademo-java-web
          commitSHA: COMMIT-SHA
          ref: refs/heads/master
-         githubToken: {{ secrets.token }}
+         githubToken: ${{ secrets.token }}
