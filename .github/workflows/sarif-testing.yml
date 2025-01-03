@@ -33,7 +33,7 @@ jobs:
        uses: actions/download-artifact@v3
        with:
          name: "policy-flaws"
-
+  
      - name: Convert policy scan output to SARIF format
        id: convert
        uses: Veracode/veracode-pipeline-scan-results-to-sarif@v2.0.4
@@ -43,7 +43,7 @@ jobs:
          output-results-sarif: veracode-results.sarif
          repo_owner: sroy037
          repo_name: verademo-java-web
-         commitSHA: $GITHUB_SHA
+         commitSHA: 3b5572a5975d4233c334aa8da731f8b3e7ea903a
          ref: refs/heads/main
          githubToken: ${{ secrets.token }}
 
@@ -57,3 +57,4 @@ jobs:
        uses: github/codeql-action/upload-sarif@v2
        with:
          sarif_file: veracode-results.sarif
+         commit_sha: 3b5572a5975d4233c334aa8da731f8b3e7ea903a
