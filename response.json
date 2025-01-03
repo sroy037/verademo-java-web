@@ -103,7 +103,6 @@
             "name": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS)",
             "href": "https://api.veracode.com/appsec/v1/cwes/80"
           },
-          "file_path": "WEB-INF/views/feed.jsp",
           "file_name": "feed.jsp",
           "module": "verademo.war_htmljscode.veracodegen.htmla.jsa",
           "relative_location": -1,
