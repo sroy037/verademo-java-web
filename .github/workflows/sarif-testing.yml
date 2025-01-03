@@ -58,3 +58,4 @@ jobs:
        with:
          sarif_file: veracode-results.sarif
          sha: 3b5572a5975d4233c334aa8da731f8b3e7ea903a
+         ref: refs/heads/main
