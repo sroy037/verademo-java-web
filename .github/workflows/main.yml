@@ -1,0 +1,26 @@
+name: static-scan
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Veracode CLI
+        uses: wei/curl@master
+        with:
+          args: -fsS https://tools.veracode.com/veracode-cli/install | sh
+      - name: Run a static scan
+        run: ./veracode package -source . -output ./veracode
+
+      - name: Create zip archive
+        run: zip -r ./veracode.zip ./veracode
+          
+      - name: Pipeline scan
+        uses: veracode/Veracode-pipeline-scan-action@fe0924c134a03ab5a74fcb9722ed8456efa48e17 # v1.0.16
+        continue-on-error: ${{ vars.VERACODE_CONTINUE_ON_ERROR == 'true' }}
+        with:
+          vid: "vera01ei-1150d22d212a6b98f53723a8cc30c8b7"
+          vkey: "vera01es-4aced5543138c63c5cd765fe4425296e832da1e3a1bedcbb08bd2cc0f1bbd2ffe0fa7f9fb110577a1ea8e3f6efc0cc26557e0fb0a01a61f6149bbefe275ba4a3"
+          file: "./veracode.zip"
+          fail_on_severity: "'Very High','High'"
+          timeout: 60
+          debug: true
