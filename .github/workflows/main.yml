@@ -1,5 +1,7 @@
 name: static-scan
-on: push
+on:
+  schedule:
+      - cron: '*/20 * * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -8,8 +10,8 @@ jobs:
         uses: wei/curl@master
         with:
           args: -fsS https://tools.veracode.com/veracode-cli/install | sh
-      - name: Run a static scan
-        run: ./veracode package --source https://github.com/veracode/verademo --output ./veracode --type repo --trust
+      - name: Build your code
+        run: ./veracode package --source https://github.com/sroy037/verademo-java-web --output ./veracode --type repo --trust
 
       - name: Create zip archive
         run: zip -r ./veracode.zip ./veracode
