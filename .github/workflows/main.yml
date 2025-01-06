@@ -23,4 +23,4 @@ jobs:
           file: "./veracode.zip"
           fail_on_severity: "'Very High','High'"
           timeout: 60
-          debug: true
+          verbose: true
