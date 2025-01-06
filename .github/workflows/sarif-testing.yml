@@ -3,7 +3,7 @@
 
 name: Sarif Testing
 
-on: push
+on: pull
 
 jobs:
  get-policy-flaws:
