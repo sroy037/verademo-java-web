@@ -6,6 +6,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repo
+        uses: action/checkout@v3
+      
       - name: Create zip archive
         run: zip -r ./veracode.zip ./target/verademo.war
           
