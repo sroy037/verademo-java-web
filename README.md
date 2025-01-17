@@ -1,4 +1,4 @@
-# VeraDemo - Blab-a-Gag - test branch
+# VeraDemo - Blab-a-Gag
 
 ## About
 
